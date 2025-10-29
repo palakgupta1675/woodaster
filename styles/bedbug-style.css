@@ -1,0 +1,729 @@
+body{
+    height:100%;
+    width:100%;
+    overflow-x: hidden;
+}
+.hero-container{
+    
+    top:0%;
+    left:0%;
+    right:0%;
+    width: 100%;
+    height:auto;
+   
+}
+.hero-image{
+    position: relative;
+    top:0%;
+    right:0%;
+    left:0%;
+    width: 100%;
+    height: 90%;
+    
+
+}
+@keyframes changeColor {
+    from { background: transparent; }
+    to { background: #22A426; }
+}
+header {
+  position: fixed;
+  top: 0%;
+  height:12%;
+  width: 100%;
+  padding: 0.625rem;
+  color: white;
+  animation: changeColor linear both;
+  animation-timeline: scroll(y);
+  animation-range: 0 300px; /* 300px scroll hone tak color change hoga */
+  z-index: 100;
+}
+.logo{
+    position: absolute;
+    top:12%;
+    height: auto;
+    width:6%;
+    left:6%;
+    border-radius: 8px;
+
+}
+.name1{
+    position: absolute;
+    top:25%;
+    left:13%;
+    color:white;
+    font-family: "merienda one";
+    font-size: 1.25rem;
+    
+}
+.name1 p{
+    top:2.9%;
+    left:14%;
+    margin-top: 0px;
+    font-size: 0.875rem;
+}
+
+.nav-bar{
+    position: absolute;
+    display: flex;
+    width:34.66%;
+    height: 2.59vh;
+    font-size:1.5rem;
+    font-family: Roboto;
+    color: white;
+    font-weight: bold;
+    top:12%;
+    left: 42.66%;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 5%;
+    list-style: none;
+    
+}
+.nav-bar a{
+    color:white;
+    text-decoration: none;
+}
+/* Hide checkbox */
+    .dropdown input {
+      display: none;
+    }
+
+    /* Menu button */
+    .menu-btn {
+      background-color:#22A426;
+      color: white;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: none;
+      margin-right: 5%;
+      margin-top: 2%;
+    }
+
+    /* Dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      margin-top: 5px;
+     
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+ .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* When checkbox checked → show dropdown */
+    .dropdown input:checked ~ .dropdown-content {
+      display: block;
+    }
+.hero-title{
+    position: absolute;
+    top:35%;
+    left:7.58%;
+    font-weight: bold;
+    font-size:3rem;
+    color: white;
+    font-family:'Josefin Sans', sans-serif;
+    line-height: 3rem;
+    
+}
+.what{
+    height: 50%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    margin-top: 5%;
+}
+.what h1{
+    width: 100%;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#22A426;
+   
+}
+.what p{
+    font-family: "Roboto slab",serif;
+    width: 230%;
+    font-size:1.2rem;
+}
+.what img{
+    height:100%;
+    width: 40%;
+    box-shadow:0px 0px 20px 8px  rgba(0, 0, 0, 0.5);
+    margin-right: 0%;
+    margin-left: 60%;
+}
+.sign{
+    height: 60%;
+    width: 80%;
+    margin-left:10%;
+    margin-right: 10%;
+    display: flex;
+    margin-top: 10%;
+}
+.sign h1{
+    
+    width: 200%;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#22A426;
+    margin-left: -30%;
+    
+   
+}
+.sign p{
+    font-family: "Roboto slab",serif;
+    width: 200%;
+    font-size: 1.2rem;
+     margin-left: -30%;
+    
+}
+.sign img{
+     height:80%;
+    width: 50%;
+    margin-left: 0%;
+    box-shadow:0px 0px 20px 8px  rgba(0, 0, 0, 0.5);
+}
+.tips{
+  height: 60%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    margin-top: 10%;
+
+}
+.tips h1{
+   width: 120%;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#22A426;
+  
+}
+.tips p{
+   font-family: "Roboto slab",serif;
+    width: 100%;
+    font-size:1.2rem;
+}
+.tips img{
+    height:130%;
+    width: 70%;
+    box-shadow:0px 0px 20px 8px  rgba(0, 0, 0, 0.5);
+    margin-right: 0%;
+    margin-left:30%;
+}
+.benefit{
+    height: 60%;
+    width: 80%;
+    margin-left:10%;
+    margin-right: 10%;
+    display: flex;
+    margin-top: 10%;
+   
+}
+.benefit h1{
+   
+    width: 150%;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#22A426;
+    margin-left:-15%;
+}
+.benefit p{
+    font-family: "Roboto slab",serif;
+    width: 200%;
+    font-size: 1.2rem;
+     margin-left: -15%;
+}
+.benefit img{
+    height:150%;
+    width: 65%;
+    margin-left: 0%;
+    box-shadow:0px 0px 20px 8px  rgba(0, 0, 0, 0.5);
+}
+footer {
+    margin-top:15%;
+    background: #052229;
+    color: white;
+    padding: 5% 8%;
+    display: flex;
+    height: auto;
+    width:auto;
+    box-shadow: inset 0 0 200px 10px rgba(0,0,0,0.5);
+}
+.footer-container {
+   display: flex;
+}
+.footer-section h3 {
+    margin-bottom: 10%;
+    margin-left: 10%;
+    font-size:1.5rem;
+    letter-spacing: 2%;
+    font-weight: bold;
+    font-family: Roboto;
+    width: auto;
+}
+.footer-section p, 
+.footer-section a {
+    margin-left: 10%;
+    font-size: 1rem;
+    color: #ddd;
+    text-decoration: none;
+    line-height: 1.8rem;
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+}
+.footer-icons{
+    display:flex;
+    height: 10%;
+    margin-top: 8%;
+}
+
+.footer-icons a {
+    justify-content: space-between;
+    
+    margin-right: 15%;
+    font-size: 1.50rem;
+}
+.footer-icons .fa-instagram { color: #E1306C; }
+.footer-icons .fa-facebook { color: #1877F2; }
+.footer-icons .fa-whatsapp { color: #25D366; }
+.footer-icons .fa-google { color: #DB4437; }
+.map iframe {
+    border: 0;
+    width: 130%;
+    height: 90%;
+    border-radius: 10px;
+}
+.footer-bottom {
+   padding-top:5%;
+    text-align: left;
+    background: #00191D;
+    color: #bbb;
+    font-size: 1rem;
+    font-family: Roboto;
+    width:auto;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}
+.get-quote-link{
+    height:0%; 
+    width:30%;
+     background-color: #22A426; 
+     margin-top: 10%;
+      margin-left: 35%;
+      padding :1% 3%;
+      text-align: center;
+      align-items: center;
+      color: white;
+      font-size: 1.7rem;
+      border-radius: 15px;
+      
+}
+a{
+  text-decoration: none;
+  font-family: "Roboto slab",serif;
+}
+.get-quote-link:hover{
+    background-color:#084E0A ;
+}
+/*Desktop*/
+@media(min-width:1024px){
+    .nav-bar{
+      column-gap: 5%;
+      width:45%;
+}
+.what{
+  background-color: #EFF5FB;
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20px;
+  padding-bottom: 8%;
+}
+.what h1{
+  width:200%;
+}
+
+.sign{
+  background-color: #EFF5FB;
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20px;
+  padding-bottom: 8%;
+}
+
+.sign h1{
+  width: auto;
+}
+.sign img{
+  height:120%;
+}
+
+.tips{
+  background-color: #EFF5FB;
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20px;
+}
+
+.tips h1{
+  width:auto;
+}
+
+.tips img{
+  height:110%;
+}
+
+.benefit{
+  background-color: #EFF5FB;
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20px;
+}
+
+.benefit h1{
+  width: auto;
+}
+
+.benefit img{
+  height:100%;
+}
+}
+/* ===== Tablet devices (up to 1024px) ===== */
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 10vh;
+    padding: 1rem;
+  }
+  .logo {
+    width: 12vh;
+    margin-top: 0vh;
+    left: 5%;
+  }
+  .name1 {
+    font-size: 1.2rem;
+    top: 20%;
+    margin-left: 3vh;
+  }
+ .nav-bar {
+    font-size: 1.1rem;
+    width: 60vh;
+    left: 40%;
+    margin-top: 4vh;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+    top: 30%;
+    left: 8%;
+    line-height: 1.2;
+  }
+
+  .what{
+    background-color:#EFF5FB;
+    padding: 3%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 20%;
+    border-radius: 20px;
+     width: 80%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    flex-direction: column;
+  }
+  .what h1{
+    width:auto;
+    font-size: 1.75rem;
+    margin-left: 0;
+  }
+  .what p{
+    margin-top: 5%;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+  .what img{
+    width:50%;
+    margin-left: 20%;
+  }
+  .sign{
+    background-color:#EFF5FB;
+    padding: 3%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 20%;
+    border-radius: 20px;
+     width: 80%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    flex-direction: column;
+  }
+  .sign h1{
+    width:auto;
+    font-size: 1.75rem;
+    margin-left: 0;
+  }
+  .sign p{
+    margin-top: 5%;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+  .sign img{
+    width:50%;
+    margin-left: 20%;
+  }
+
+  .tips{
+    background-color:#EFF5FB;
+    padding: 3%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 20%;
+    border-radius: 20px;
+     width: 80%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    flex-direction: column;
+  }
+  .tips h1{
+    width:auto;
+    font-size: 1.75rem;
+    margin-left: 0;
+  }
+  .tips p{
+    margin-top: 5%;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+  .tips img{
+    width:50%;
+    margin-left: 20%;
+  }
+
+  .benefit{
+    background-color:#EFF5FB;
+    padding: 3%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 20%;
+    border-radius: 20px;
+     width: 80%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    flex-direction: column;
+  }
+  .benefit h1{
+    width:auto;
+    font-size: 1.75rem;
+    margin-left: 0;
+  }
+  .benefit p{
+    margin-top: 5%;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+  .benefit img{
+    width:50%;
+    margin-left: 20%;
+  }
+  footer {
+    padding: 5% 5%;
+  }
+  .footer-section h3 {
+    font-size: 1.3rem;
+    margin-left: 0;
+  }
+  .footer-container{
+    width:50vh;
+    column-gap: 5%;
+  }
+  .footer-section p, .footer-section a {
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+  .map iframe {
+    width: 40vh;
+    height: 250px;
+    margin-left: -30%;
+    margin-top: -20%;
+  }
+  .footer-icons a {
+    font-size: 1.3rem;
+  }
+  .footer-bottom {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== Mobile devices (up to 767px) ===== */
+@media only screen and (max-width: 767px) {
+  header {
+    height: 10%;
+    padding: 0.5rem;
+  }
+  .logo {
+    width:10vh;
+    margin-top: 0vh;
+    left: 5%;
+    height: 10vh;
+  }
+  .name1 {
+    font-size: 1rem;
+    margin-top: 0vh;
+    margin-left:5vh;
+  }
+  .nav-bar {
+    display: none; /* या hamburger menu दिखा सकते हो */
+  }
+  .menu-btn {
+    display: block;
+    position: absolute;
+    top: 15px;   /* adjust as needed */
+    right: 20px; /* icon screen ke right se thoda gap de */
+    /* z-index agar chahiye to ensure visible ho upar */
+    z-index: 999;
+  }
+
+  /* dropdown positioning so that the menu shows below the icon, aligned right */
+  .dropdown-content {
+    right: 10%;   /* content box aligned to right side */
+    left: auto; 
+    top:30%   /* ensure left side positioning doesnt override right */
+  }
+  .hero-title {
+    font-size: 2rem;
+    top: 25%;
+    left: 5%;
+    line-height: 1.2;
+  }
+
+  .what{
+    background-color:#EFF5FB;
+    padding: 3%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10%;
+    width:80%;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  .what h1{
+    width:auto;
+  }
+  .what p{
+    margin-top: 5%;
+  }
+  .what img{
+    width:50%;
+    margin-left: 20%;
+  }
+
+  .sign{
+    background-color:#EFF5FB;
+    padding: 3%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10%;
+    width:80%;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  .sign h1{
+    width:auto;
+  }
+  .sign p{
+    margin-top: 5%;
+  }
+  .sign img{
+    width:50%;
+    margin-left: 20%;
+  }
+
+  .tips{
+    background-color:#EFF5FB;
+    padding: 3%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10%;
+    width:80%;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  .tips h1{
+    width:auto;
+  }
+  .tips p{
+    margin-top: 5%;
+  }
+  .tips img{
+    width:50%;
+    margin-left: 20%;
+  }
+
+  .benefit{
+    background-color:#EFF5FB;
+    padding: 3%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10%;
+    width:80%;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  .benefit h1{
+    width:auto;
+  }
+  .benefit p{
+    margin-top: 5%;
+  }
+  .benefit img{
+    width:50%;
+    margin-left: 20%;
+  }
+  
+ .footer-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20%;
+  }
+  .footer-icons {
+    justify-content: center;
+  }
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  .map iframe {
+    width: 50vh;
+    height: 50vh;
+    margin-left: -7vh;
+    margin-right: 7vh;
+  }
+}
