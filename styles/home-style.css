@@ -1,6 +1,9 @@
 body{
-    height:100%;
-    width:100%;
+    left:0%;
+    top:0%;
+    right:0%;
+    height:auto;
+    width:auto;
 }
 .hero-container{
     
@@ -8,16 +11,13 @@ body{
     left:0%;
     right:0%;
     width: 100%;
-    height:auto;
+    height:60%;
    
 }
 .hero-image{
     position: relative;
-    top:0%;
-    right:0%;
-    left:0%;
     width: 100%;
-    height: auto;
+    height: 100%;
     
 
 }
@@ -95,11 +95,11 @@ header {
     .menu-btn {
       background-color:#22A426;
       color: white;
-      padding: 10px 15px;
+      padding: 2% 3%;
       cursor: pointer;
       border-radius: 5px;
       display: none;
-      margin-right: 5%;
+      margin-right: 7%;
       margin-top: 2%;
     }
 
@@ -873,20 +873,27 @@ footer {
 
 /* 📱 MOBILE MEDIA QUERY */
 @media (min-width:360px) and (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
   header {
-    height: 10%;
-    padding: 0.5rem;
+    height: 5%;
+    padding: 3% 1%;
+    position: fixed;
   }
   .logo {
-    width:10vh;
+    width:9vh;
     margin-top: 0vh;
     left: 5%;
-    height: 10vh;
+    height:9vh;
   }
   .name1 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 0vh;
     margin-left:5vh;
+  }
+  .name1 p{
+    font-size: 0.4rem;
   }
   
   .nav-bar {
@@ -909,25 +916,36 @@ footer {
     left: auto; 
     top:30%   /* ensure left side positioning doesnt override right */
   }
+  .hero-container{
+    width:160%;
+    height:auto;
+  }
+  .hero-image{
+    height:100%;
+    width:100%;
+  }
   
   .hero-title {
     font-size: 1rem;
-    line-height: 2rem;
-    width: 90%;
-    left: 20%;
-    top:13%;
+    line-height: 1rem;
+    width: 50%;
+    margin-left: 5%;
+    top:16%;
+    text-align: center;
+
   }
   .hero-title p{
-    width: 60%;
-    font-size: 0.60rem;
-    margin-left: -10%;
+    width: 90%;
+    font-size: 0.5rem;
+    margin-left: 8%;
+    line-height: 0.5rem;
     
   }
   .hero-button {
     height:4%;
     width: 20%;
-    top: 30%;
-    left: 25%;
+    top: 27%;
+    left: 30%;
     font-size: 0.6rem;
   }
   .spider-net{
@@ -938,17 +956,22 @@ footer {
     margin-left:30%;
   }
   .cockroach-png{
-    margin-left:50vh;
-    margin-top: -15vh;
+    margin-left:72%;
+    margin-top: -27%;
   }
   .services-container {
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 3%;
     margin-left: 25%;
     margin-right: 20%;
   }
+  .services-box{
+    height:40vh;
+    width:40vh;
+  }
   .our-product-section{
-    margin-top: 30%;
+    margin-top: 170%;
+    width:160%;
   }
   .our-product-text{
     font-size: 1.5rem;
@@ -959,12 +982,13 @@ footer {
     margin-top: -5%;
   }
   .our-product-spider{
-    margin-left: 75%;
-    margin-top: -20%;
+    margin-left: 90%;
+    margin-top: -22%;
     height: auto;
   }
   .our-product-container{
     padding:3%;
+    margin-right: 10%;
   }
   .our-product-description{
     font-size: 0.80rem;
@@ -976,6 +1000,9 @@ footer {
     margin-top: -15%;
     height:30%;
   }
+  .sector-section{
+    margin-top:30%;
+  }
   .service-sector-text{
     font-size: 1.5rem;
     margin-left: 30%;
@@ -986,8 +1013,12 @@ footer {
     margin-top: -15%;
   }
   .icon-container {
+    margin-left: 15%;
     grid-template-columns: 1fr 1fr;
     row-gap: 20px;
+  }
+  .why-needed-section{
+    width:160%;
   }
   .why-needed-text{
     font-size: 1.5rem;
@@ -1002,11 +1033,14 @@ footer {
   }
   .why-needed-bee{
     height:auto;
-    margin-top: -15%;
-    margin-left: 75%;
+    margin-top: -22%;
+    margin-left: 100%;
   }
   .why-needed-box p{
     font-size: 0.8rem;
+  }
+  .what-people-say-section{
+    width:150%;
   }
   .what-people-say-text{
     font-size: 1.5rem;
@@ -1019,7 +1053,7 @@ footer {
   .inquiry-form-container {
     height: auto;
     grid-template-columns: 1fr;
-    width: 70%;
+    width: 100%;
     transform: translateY(20px);
     margin-bottom: -15%;
     padding: 8% 5%;
@@ -1055,7 +1089,8 @@ footer {
 
     }
   footer {
-    margin-top: 100%;
+    width: 150%;
+    margin-top: 140%;
     padding: 15% 5% 5% 5%;
     text-align: center;
     padding-top: 160%;
@@ -1091,7 +1126,11 @@ footer {
    .map iframe {
     width: 50vh;
     height: 50vh;
-    margin-left: -7vh;
+    margin-left: 10vh;
     margin-right: 7vh;
+    margin-top: -10%;
+  }
+  .footer-bottom{
+    width:160%;
   }
 }
