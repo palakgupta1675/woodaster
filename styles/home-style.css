@@ -204,7 +204,7 @@ header {
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     height: auto;
-    width:90%;
+    width:100%;
     margin-top:0%;
     margin-left:5%;
     margin-right: 5%;
@@ -691,12 +691,12 @@ header {
      border:2px solid black;
     }
 footer {
-  padding-top: 30%;
+  
     margin-top:30%;
     background: #052229;
     color: white;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 10%;
+    padding-top: 15%;
     display: flex;
     height: auto;
     width:auto;
@@ -755,17 +755,6 @@ footer {
     width: 250%;
     height: 90%;
     border-radius: 10px;
-}
-.footer-bottom {
-   padding-top:10%;
-    text-align: left;
-    background: #00191D;
-    color: #bbb;
-    font-size: 1rem;
-    font-family: Roboto;
-    width:auto;
-    padding-left: 1%;
-    padding-bottom: 1%;
 }
 /* desktop */
 @media screen and (min-width: 1025px) and (max-width: 1920px){
@@ -904,8 +893,8 @@ footer {
   .menu-btn {
     display: block;
     position: absolute;
-    top: 15px;   /* adjust as needed */
-    right: 20px; /* icon screen ke right se thoda gap de */
+    top: 5%;   /* adjust as needed */
+    right: 5%; /* icon screen ke right se thoda gap de */
     /* z-index agar chahiye to ensure visible ho upar */
     z-index: 999;
   }
@@ -913,12 +902,11 @@ footer {
   /* dropdown positioning so that the menu shows below the icon, aligned right */
   .dropdown-content {
     right: 10%;   /* content box aligned to right side */
-    left: auto; 
+    left:20%; 
     top:30%   /* ensure left side positioning doesnt override right */
   }
   .hero-container{
-    width:160%;
-    height:auto;
+    width:100vh;
   }
   .hero-image{
     height:100%;
@@ -971,7 +959,7 @@ footer {
   }
   .our-product-section{
     margin-top: 170%;
-    width:160%;
+    width:100vh;
   }
   .our-product-text{
     font-size: 1.5rem;
@@ -1018,7 +1006,7 @@ footer {
     row-gap: 20px;
   }
   .why-needed-section{
-    width:160%;
+    width:100vh;
   }
   .why-needed-text{
     font-size: 1.5rem;
@@ -1040,7 +1028,7 @@ footer {
     font-size: 0.8rem;
   }
   .what-people-say-section{
-    width:150%;
+    width:100vh;
   }
   .what-people-say-text{
     font-size: 1.5rem;
@@ -1058,6 +1046,7 @@ footer {
     margin-bottom: -15%;
     padding: 8% 5%;
     margin-top: 40%;
+    margin-left: 25%;
   }
   .inquiry-description h3 {
     font-size: 1.5rem;
@@ -1089,7 +1078,7 @@ footer {
 
     }
   footer {
-    width: 150%;
+    width: 100vh;
     margin-top: 140%;
     padding: 15% 5% 5% 5%;
     text-align: center;
@@ -1131,6 +1120,6 @@ footer {
     margin-top: -10%;
   }
   .footer-bottom{
-    width:160%;
+    width:100%;
   }
 }
