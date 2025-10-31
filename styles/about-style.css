@@ -3,7 +3,7 @@ body{
     width:100%;
 }
 .hero-container{
-    
+    position: relative;
     top:0%;
     left:0%;
     right:0%;
@@ -12,7 +12,6 @@ body{
    
 }
 .hero-image{
-    position: relative;
     top:0%;
     right:0%;
     left:0%;
@@ -147,13 +146,14 @@ header {
     width: 12%;
     border-radius: 20px;
     border: none;
-    top:120%;
+    margin-top:-10%;
     left: 65%;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.25rem;
     font-weight: bold;
 
 }
+
 .hero-button a{
     color:white;
     text-decoration: none;
@@ -229,14 +229,13 @@ header {
     font-family: "Roboto slab",serif;
     margin-left :-900%; 
 }
-
 .what-inspired h1{
     color:#22A426;
     font-family: Roboto;
     font-size: 2rem;
     font-weight: bold;
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .what-inspired p{
     height:10%;
@@ -314,49 +313,43 @@ footer {
     height: 90%;
     border-radius: 10px;
 }
-.footer-bottom {
-   padding-top:5%;
-    text-align: left;
-    background: #00191D;
-    color: #bbb;
-    font-size: 1rem;
-    font-family: Roboto;
-    width:auto;
-    padding-bottom: 1%;
-    padding-left: 1%;
-}
-/*desktop*/
-.hero-button{
-  margin-top: -5%;
-}
 /* mobile*/
 
-@media only screen and (max-width: 767px) {
+@media (min-width:360px) and (max-width: 768px) {
   /* Header */
+  body{
+    overflow-x: hidden;
+  }
   header {
-    height: 10%;
-    padding: 0.5rem;
+    height: 5%;
+    padding: 3% 1%;
+    position: fixed;
   }
   .logo {
-    width:10vh;
+    width:9vh;
     margin-top: 0vh;
     left: 5%;
-    height: 10vh;
+    height:9vh;
   }
   .name1 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 0vh;
     margin-left:5vh;
   }
-  .nav-bar {
-    display: none; /* या hamburger menu दिखा सकते हो */
+  .name1 p{
+    font-size: 0.4rem;
   }
+  
+  .nav-bar {
+    display: none !important;
+  }
+
   /* Show menu icon */
   .menu-btn {
     display: block;
     position: absolute;
-    top: 15px;   /* adjust as needed */
-    right: 20px; /* icon screen ke right se thoda gap de */
+    top: 5%;   /* adjust as needed */
+    right: 5%; /* icon screen ke right se thoda gap de */
     /* z-index agar chahiye to ensure visible ho upar */
     z-index: 999;
   }
@@ -364,18 +357,24 @@ footer {
   /* dropdown positioning so that the menu shows below the icon, aligned right */
   .dropdown-content {
     right: 10%;   /* content box aligned to right side */
-    left: auto; 
+    left:20%; 
     top:30%   /* ensure left side positioning doesnt override right */
   }
-  .hero-title {
-    top: 40%;
-    left: 5%;
-    font-size: 2rem;
+  .hero-container{
+    width:100vh;
   }
+  .hero-image{
+    height:100%;
+    width:100%;
+  }
+  
 .hero-button{
-  margin-top: -101%;
-  width:30%;
-  left:60%;
+    width:20vh;
+  left:60vh;
+  font-size: 1rem;
+  top:60vh;
+  padding:1%;
+  
 }
   .image {
     width:40vh;
@@ -390,20 +389,26 @@ footer {
   /* About Us Section */
   .about-us h1,
   .who-we-are h1,
-  .what-we-do h1,
   .what-inspired h1,
   .future-vision h1 {
     font-size: 1.5rem;
-    margin-left: 5%;
+   margin-left: 50%;
+   width:100%;
   }
   .about-us p,
   .who-we-are p,
-  .what-we-do p,
   .what-inspired p,
   .future-vision p {
-    width: 90%;
+    width: 100vh;
     margin-left: 5%;
     font-size: 1rem;
+  }
+  .what-we-do{
+    width:100vh;
+  }
+  .what-we-do h1{
+    margin-left: 30%;
+    font-size: 1.5rem;
   }
   .about-us h1{
     margin-top: 10%;
@@ -413,6 +418,9 @@ footer {
   }
 
   /* Footer */
+  footer{
+    width:100vh;
+  }
   .footer-container {
     flex-direction: column;
     align-items: center;

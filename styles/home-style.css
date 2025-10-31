@@ -1,9 +1,7 @@
 body{
-    left:0%;
-    top:0%;
-    right:0%;
     height:auto;
     width:auto;
+    overflow-x: hidden;
 }
 .hero-container{
     
@@ -184,6 +182,10 @@ header {
     margin-left: -8.33%;
     opacity:100%;
 }
+.our-service-section{
+    height:auto;
+    width:100%;
+}
 .our-services-text{
     color:#22A426;
     font-size: 2.5rem;
@@ -204,7 +206,7 @@ header {
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     height: auto;
-    width:100%;
+    width:90%;
     margin-top:0%;
     margin-left:5%;
     margin-right: 5%;
@@ -696,16 +698,15 @@ footer {
     background: #052229;
     color: white;
     padding: 10%;
-    padding-top: 15%;
     display: flex;
     height: auto;
     width:auto;
     box-shadow: inset 0 0 200px 10px rgba(0,0,0,0.5);
 }
 .footer-container {
-  margin-top: 10%;
-  margin-left: 0%;
-  margin-right:0%;
+  margin-top:25%;
+  margin-left: 10%;
+  margin-right:10%;
    display: flex;
    columns: 1fr 1fr 1fr 1fr;
 }
@@ -766,10 +767,6 @@ footer {
   .cockroach-png{
     margin-left: 120vh;
     margin-top: -25vh;
-  }
-  .footer-container{
-    margin-left: 0%;
-    margin-right: auto;
   }
 
 }
@@ -1082,7 +1079,6 @@ footer {
     margin-top: 140%;
     padding: 15% 5% 5% 5%;
     text-align: center;
-    padding-top: 160%;
     
   }
   .footer-icons{
@@ -1094,7 +1090,7 @@ footer {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: -50%;
+    margin-top: 60%;
   }
   .footer-section i{
   margin-left: -45%;
