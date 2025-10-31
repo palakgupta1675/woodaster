@@ -1,7 +1,4 @@
 body{
-    left:0%;
-    top:0%;
-    right:0%;
     height:auto;
     width:auto;
 }
@@ -1082,7 +1079,6 @@ footer {
     margin-top: 140%;
     padding: 15% 5% 5% 5%;
     text-align: center;
-    padding-top: 160%;
     
   }
   .footer-icons{
@@ -1094,7 +1090,7 @@ footer {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: -50%;
+    margin-top: 60%;
   }
   .footer-section i{
   margin-left: -45%;
