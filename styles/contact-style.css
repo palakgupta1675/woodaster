@@ -468,7 +468,6 @@ footer {
     width: 40vh;
     height: 250px;
     margin-left: -30%;
-    margin-top: -20%;
   }
   .footer-icons a {
     font-size: 1.3rem;
@@ -477,9 +476,6 @@ footer {
     font-size: 1rem;
   }
 }
-/*desktop*/
-
-/* Mobile first base styles assumed above */
 
 /* ====== Tablets (768px to 1024px) ====== */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
