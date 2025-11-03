@@ -146,7 +146,7 @@ header {
     width: 12%;
     border-radius: 20px;
     border: none;
-    top:120%;
+    margin-top:-10%;
     left: 65%;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.25rem;
@@ -229,14 +229,13 @@ header {
     font-family: "Roboto slab",serif;
     margin-left :-900%; 
 }
-
 .what-inspired h1{
     color:#22A426;
     font-family: Roboto;
     font-size: 2rem;
     font-weight: bold;
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .what-inspired p{
     height:10%;
@@ -314,10 +313,12 @@ footer {
     height: 90%;
     border-radius: 10px;
 }
+
 /*desktop*/
 .hero-button{
   margin-top: -5%;
 }
+
 /* mobile*/
 
 @media (min-width:360px) and (max-width: 768px) {
