@@ -399,6 +399,30 @@
 
     document.getElementById("inquiryForm").addEventListener("submit", function(event){
         event.preventDefault();
+
+        // Get form field values
+        const name = document.querySelector('input[name="name"]').value.trim();
+        const contact = document.querySelector('input[name="contact"]').value.trim();
+        const description = document.querySelector('textarea[name="description"]').value.trim();
+        const services = document.querySelectorAll('input[name="service"]:checked');
+
+        // Validation checks
+        if (!name || !contact || !description) {
+            alert("⚠️ Please fill all the required fields (Name, Contact, Description).");
+            return;
+        }
+
+        if (services.length === 0) {
+            alert("⚠️ Please select at least one service.");
+            return;
+        }
+
+        if (!/^\d{10}$/.test(contact)) {
+            alert("⚠️ Please enter a valid 10-digit contact number.");
+            return;
+        }
+
+        // Send email if all validations pass
         emailjs.sendForm("service_2yutxms", "template_gjczfax", this)
         .then(function(){
             alert("✅ Inquiry sent successfully!");
@@ -408,6 +432,7 @@
         });
     });
 </script>
+
 
 </body>
 </html>

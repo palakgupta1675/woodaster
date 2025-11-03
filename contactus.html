@@ -128,20 +128,40 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+ <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
-    emailjs.init("If_Df-bYcWvYza9Lc"); // Replace with your EmailJS Public Key
+  emailjs.init("If_Df-bYcWvYza9Lc"); // Your EmailJS Public Key
 
-    document.getElementById("contactForm").addEventListener("submit", function(event){
-        event.preventDefault();
-        emailjs.sendForm("service_2yutxms", "template_gjczfax", this)
-        .then(function(){
-            alert("✅ Message sent successfully!");
-            document.getElementById("contactForm").reset();
-        }, function(err){
-            alert("❌ Failed to send: " + JSON.stringify(err));
-        });
-    });
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    //  Front-end Validation
+    const name = this.name.value.trim();
+    const contact = this.contact.value.trim();
+    const service = this.service.value.trim();
+    const message = this.message.value.trim();
+
+    if (!name || !contact || !service || !message) {
+      alert("⚠️ Please fill all required fields before submitting!");
+      return; // stop form from sending
+    }
+
+    // Contact number validation (only 10 digits)
+    if (!/^\d{10}$/.test(contact)) {
+      alert("⚠️ Please enter a valid 10-digit contact number!");
+      return;
+    }
+
+    //  If validation passes → send via EmailJS
+    emailjs.sendForm("service_2yutxms", "template_gjczfax", this)
+      .then(function() {
+        alert("✅ Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      }, function(err) {
+        alert("❌ Failed to send: " + JSON.stringify(err));
+      });
+  });
 </script>
+
 </body>
 </html>
