@@ -335,17 +335,6 @@ footer {
     height: 90%;
     border-radius: 10px;
 }
-.footer-bottom {
-   padding-top:5%;
-    text-align: left;
-    background: #00191D;
-    color: #bbb;
-    font-size: 1rem;
-    font-family: Roboto;
-    width:auto;
-    padding-bottom: 1%;
-    padding-left: 1%;
-}
 /*Desktop*/
 @media(min-width:1024px){
     .nav-bar{

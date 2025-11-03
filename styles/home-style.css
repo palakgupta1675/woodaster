@@ -1,86 +1,66 @@
-body{
+*{
     height:auto;
     width:auto;
-    overflow-x: hidden;
-}
-.hero-container{
-    
-    top:0%;
-    left:0%;
-    right:0%;
-    width: 100%;
-    height:60%;
-   
-}
-.hero-image{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    
-
 }
 @keyframes changeColor {
     from { background: transparent; }
     to { background: #22A426; }
 }
 header {
+    display: flex;
   position: fixed;
-  left:0%;
-  right:0%;
-  top: 0%;
-  height:12%;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 14%;
   width: 100%;
-  padding: 0.625rem;
   color: white;
   animation: changeColor linear both;
   animation-timeline: scroll(y);
-  animation-range: 0 300px; /* 300px scroll hone tak color change hoga */
-  z-index: 100;
+  animation-range: 0 300px; /* scroll hone tak color change hoga */
+  z-index: 9999;
+  align-items: center;
+  overflow-x: hidden;
 }
-.logo{
-    position: absolute;
-    top:12%;
-    height: auto;
-    width:6%;
-    left:6%;
-    border-radius: 8px;
-
+.header-left-side{
+    display: flex;
+    align-items: center;
+    gap:1%;
+    width:30%;
+    padding-left:5%;
 }
-.name1{
-    position: absolute;
-    top:25%;
-    left:13%;
+.logo-container{
+    width:10vh;
+    margin-left: 6%;
+}
+.logo-container img{
+    height: 100%;
+    width:100%;
+     border-radius: 10%;
+}
+.comp-name{
     color:white;
     font-family: "merienda one";
     font-size: 1.25rem;
-    
 }
-.name1 p{
-    top:2.9%;
-    left:14%;
-    margin-top: 0px;
-    font-size: 0.875rem;
+.comp-name p{
+   margin-top: 0px;
+  font-size: 0.875rem;
 }
-
-.nav-bar{
-    position: absolute;
+.header-right-side{
+    width:70%;
+}
+.header-right-side ul{
     display: flex;
-    width:34.66%;
-    height: auto;
+    list-style: none;
     font-size:1.5rem;
     font-family: Roboto;
     color: white;
     font-weight: bold;
-    top:12%;
-    left: 42.66%;
     justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    letter-spacing: 5%;
-    list-style: none;
-    
+    margin:0% 18%;
 }
-.nav-bar a{
+.header-right-side a{
     color:white;
     text-decoration: none;
 }
@@ -91,33 +71,36 @@ header {
 
     /* Menu button */
     .menu-btn {
-      background-color:#22A426;
-      color: white;
-      padding: 2% 3%;
-      cursor: pointer;
-      border-radius: 5px;
-      display: none;
-      margin-right: 7%;
-      margin-top: 2%;
+      background-color: #22A426;
+  color: white;
+  padding: 2% 2%;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none;
+  margin-top: 2%;
+  font-size: 0.8rem;
     }
 
     /* Dropdown content */
     .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 180px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      border-radius: 5px;
-      margin-top: 5px;
+       display: none;
+  position: fixed; /* ✅ fixed so it floats above all and doesn’t affect layout */
+  top: 70px; /* ✅ exactly below header */
+  right: 5%;
+  width: 40%;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 10000; /* ✅ stays above header */
+  overflow: hidden;
      
     }
 
     .dropdown-content a {
       color: black;
-      padding: 10px 14px;
-      text-decoration: none;
-      display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
     }
  .dropdown-content a:hover {
       background-color: #ddd;
@@ -127,13 +110,25 @@ header {
     .dropdown input:checked ~ .dropdown-content {
       display: block;
     }
+.hero-container{
+    width: 100%;
+    height:60%;
+    left:0%;
+    right:0%;
+   
+}
+.hero-image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
 
-.hero-title{
+}
+.hero-title h1{
     position: absolute;
     top:35%;
-    left:7.58%;
+    left:10%;
     font-weight: bold;
-    font-size:3rem;
     color: white;
     font-family:'Josefin Sans', sans-serif;
     line-height: 3rem;
@@ -141,15 +136,15 @@ header {
 }
 
 .hero-title p{
+    position: absolute;
+    width:30%;
     font-size: 1rem;
-    height:5.33%;
-    width:33.66%;
     text-align: center;
-    left:3.166%;
-    top:26%;
     font-family:'Josefin Sans', sans-serif;
+    top:45%;
+    left:8%;
+    color: white;
     line-height: 1rem;
-    font-weight:lighter;
 }
 .hero-button{
     position: absolute;
@@ -159,7 +154,7 @@ header {
     border-radius: 20px;
     border: none;
     top:60%;
-    left: 14%;
+    left: 15%;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.25rem;
     font-weight: bold;
@@ -176,13 +171,12 @@ header {
 }
 .spider-net{
     height: 40%;
-    width: 25.5%;
+    width: 25%;
     position:absolute;
-    margin-top:-12.5%;
-    margin-left: -8.33%;
-    opacity:100%;
+    margin-top:-13%;
+    margin-left: -8%;
 }
-.our-service-section{
+.our-services-section{
     height:auto;
     width:100%;
 }
@@ -191,54 +185,37 @@ header {
     font-size: 2.5rem;
     font-family: Roboto;
     font-weight: bolder;
-    margin-left:47.83%;
-    margin-top: 8%;
-    letter-spacing: 5%;
+    text-align: center;
 }
 .cockroach-png{
     height: 12%;
-    width: 16%;
+    width: 12%;
     position: absolute;
-    margin-left: 62%;
-    margin-top: -10.5%;
+    margin-left: 55%;
+    margin-top: -10%;
 }
 .services-container{
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
-    height: auto;
-    width:90%;
-    margin-top:0%;
-    margin-left:5%;
-    margin-right: 5%;
+    width:80%;
+    margin-left:10%;
+    margin-right: 10%;
     justify-content: space-between;
-    align-items: center;
+    gap:2%;
 }
 .services-box{
-    height:50vh;
-    width: 40vh;
-    top: 21%;
-    left: 7.4%;
     background-color: #EFF5FB;
-    align-items: center;
-    margin-right: 30%;
-   
-    margin-top: 10%;
-    
+    height:70%;
+    width:96%;
 }
 .services-box:hover{
     box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-    height: 51vh;
-    width: 41vh;
     transition: 500ms;
-     margin-right: 20%;
-     align-items: center;
-    
-   
+    margin-top: 2%;
 }
-
 .service-image-container{
-    height:40%;
-    width: 60%;
+    height:30%;
+    width: 50%;
     margin-top: 12%;
     margin-left: 20%;
     border-radius: 10%;
@@ -253,40 +230,39 @@ header {
     
 }
 .services-box h4{
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
     font-family:"Roboto Slab",serif;
     letter-spacing: 5%;
     color:#22A426;
-   
-    
+}
+.services-box h5{
+    text-align: center;
+    font-family:"Roboto Slab",serif;
+    letter-spacing: 5%;
+    color:#22A426;
 }
 .services-box a{
-    font-size :0.98rem;
+    font-size :1rem;
     font-family: 'Roboto Mono', monospace;
     letter-spacing: 5%;
     margin-left: 30%;
-    top:20%;
     text-decoration: none;
     color:black;
+    margin-top: 10%;
    
 }
 .get-quote-link{
     height:5%; 
     width:80%;
-     background-color: #22A426; 
-     margin-top: 10%;
-      margin-left: 0%;
-      padding :5% 10%;
-      text-align: center;
-      align-items: center;
-      color: white;
+    background-color: #22A426; 
+    padding :5% 10%;
+    text-align: center;
+    color: white;
+    bottom:0%;
      
 }
-.get-quote-link a{
-    color: white;
-    margin-left: 4%;
-}
+
 .get-quote-link:hover{
     background-color:#084E0A ;
 }
@@ -299,8 +275,8 @@ header {
     
 }
 .our-product-insect{
-    height:15%;
-    width: 15%;
+    height:12%;
+    width: 12%;
     position:absolute;
     margin-left: 32%;
     margin-top: 2%;
@@ -310,7 +286,7 @@ header {
     font-size: 2.5rem;
     font-family: Roboto;
     font-weight: bolder;
-    margin-left:43%;
+   text-align: center;
     padding-top:6%;
     letter-spacing: 5%;
 
@@ -320,7 +296,7 @@ header {
     width: 7%;
     position: absolute;
     margin-left :67%;
-    margin-top: -12.5%;
+    margin-top: -13%;
 }
 .our-product-container{
     height:auto;
@@ -330,7 +306,6 @@ header {
     margin-left : 10%;
     margin-right : 10%;
     margin-top: 5%;
-    margin-bottom: 0%;
     box-shadow: 20px 20px 18px 0px black;
 
 }
@@ -359,7 +334,7 @@ header {
     font-size: 2.5rem;
     font-family: Roboto;
     font-weight: bolder;
-    margin-left:40%;
+    text-align: center;
     padding-top: 5%;
     letter-spacing: 5%;
 }
@@ -375,28 +350,20 @@ header {
     width:100%;
 }
 .icon-container{
-    height:90% ;
-    width: 90%;
+    height:auto;
+    width: 80%;
     display: grid;
     text-align: center;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 0%;
-    row-gap: 0%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-left: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
    
 }
 .icon-box{
     height:25%;
     width:30%;
-    margin-left: 4%;
-    bottom: 0%;
     justify-content: space-between;
-}
-.icon-box a{
-    text-decoration: none;
 }
 .icon-box p{
     font-family: roboto slab,serif;
@@ -405,7 +372,7 @@ header {
     font-weight: bold;
     color:#22A426;
     letter-spacing: 4%;
-    margin-left: 65%;
+    margin-left: 50%;
 }
 .icon{
     height: 200%;
@@ -426,7 +393,6 @@ header {
     background-color: #EFF5FB ;
 }
 .why-needed-text{
-    width:100%;
     color:#22A426;
     font-size: 2.5rem;
     font-family: Roboto;
@@ -437,20 +403,21 @@ header {
    
 }
 .why-needed-bee{
-    height:20%;
-    width:20%;
+    height:15%;
+    width:15%;
     position:absolute;
     margin-left:80%;
     margin-top: -8%;
 }
 .why-needed-container{
     display: grid;
-    height:80%;
-    width:90%;
+    height:auto;
+    width:80%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 5%;
-    margin-left:5%;
+    margin-left: 10%;
+    margin-right:10%;
 }
 .why-needed-box{
     background-color:#22A426;
@@ -483,7 +450,7 @@ header {
     padding-left: 10%;
     padding-top: 3%;
     font-family: Roboto;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bolder;
     letter-spacing: 2%;
     line-height: 2rem;
@@ -493,7 +460,7 @@ header {
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family:"Roboto Slab",serif;
     font-weight:500;
     letter-spacing: 1%;
@@ -596,7 +563,7 @@ header {
     }
 .inquiry-form-container{
   position: absolute;
-  height:80%;
+  height:auto;
   width:80%;
   margin:10% 10%;
   background-color: #22A426;
@@ -757,365 +724,341 @@ footer {
     height: 90%;
     border-radius: 10px;
 }
-/* desktop */
-@media screen and (min-width: 1025px) and (max-width: 1920px){
-  .services-container{
-    column-gap: 5%;
-    row-gap: 5%;
-    margin-right:auto;
-  }
-  .cockroach-png{
-    margin-left: 120vh;
-    margin-top: -25vh;
-  }
 
+/* mobile */
+@media only screen and (min-width:360px) and (max-width: 768px){
+    *{
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .header{
+         height: 12%;
+    }
+    @keyframes changeColor {
+    from { background: transparent; }
+    to { background: #22A426; }
 }
-/* tablet */
-@media (min-width:769px) and (max-width: 1024px) {
-  
-  .nav-bar {
-    width: 50%;
-    left: 35%;
-    font-size: 1.2rem;
-  }
-  .hero-title {
-    margin-top: -10%;
-    font-size: 2.2rem;
-    line-height: 2.5rem;
-  }
-  .logo{
-    margin-top: 2%;
-  }
-  .hero-button {
-    width: 20%;
-    font-size: 1rem;
-    left: 10%;
-    margin-top: -10%;
-    margin-left: 3%;
-  }
-  .cockroach-png{
-    margin-left: 100vh;
-    margin-top: -21vh;
-  }
-  .services-container {
-    margin-left: 10%;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 30px;
-  }
-  .our-product-spider{
-    margin-left: 105vh;
-    margin-top: -22vh;
-  }
-  .our-product-man{
-    margin-top: -14vh;
-  }
-  .service-sector-ant{
-    margin-left: 85%;
-    margin-top: -15%;
-  }
-  .icon-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .why-needed-bee{
-    margin-top: -13%;
-  }
- 
-  .inquiry-form-container {
-    grid-template-columns: 1fr;
-    max-width: 90%;
-    transform: translateY(30px);
-    margin-bottom: -10%;
-    row-gap: 20px;
-    padding: 1% 1%;
-    height:auto;
-    margin-right: 10%;
-  }
-  .inquiry-form {
-    width: 60%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: -8%;
-  }
-  footer {
-    flex-direction: column;
-    align-items: center;
-   padding-top: 120%;
-  }
-  .footer-container{
-    margin-top: -10vh;
-    width:80%;
-    margin-left: -15%;
-    margin-right: 10%;
-    column-gap: -8%;
-    margin-bottom: 10%;
-  }
-  .map iframe {
-     width: 80vh;
-    height: 250px;
-    margin-left: -30%;
-    margin-top: -20%;
-  }
-}
-
-/* 📱 MOBILE MEDIA QUERY */
-@media (min-width:360px) and (max-width: 768px) {
-  body{
-    overflow-x: hidden;
-  }
-  header {
-    height: 5%;
-    padding: 3% 1%;
-    position: fixed;
-  }
-  .logo {
-    width:9vh;
-    margin-top: 0vh;
-    left: 5%;
-    height:9vh;
-  }
-  .name1 {
-    font-size: 0.8rem;
-    margin-top: 0vh;
-    margin-left:5vh;
-  }
-  .name1 p{
-    font-size: 0.4rem;
-  }
-  
-  .nav-bar {
-    display: none !important;
-  }
-
-  /* Show menu icon */
+    .header-left-side{
+    flex-basis: 50%;
+    padding-left:4%;
+    gap:6%;
+    }
+    .logo-container{
+        width:7vh;
+        margin-left: 6%;
+    }
+    .comp-name{
+        font-size: 0.8rem;
+    }
+    .comp-name p{
+        font-size: 0.5rem;
+    }
+    .header-right-side{
+        flex-basis:50%;
+        flex-wrap: wrap;
+    }
+    .header-right-side ul{
+        display: none;
+        margin:0;
+       
+    }
+    /* Show menu icon */
   .menu-btn {
     display: block;
     position: absolute;
-    top: 5%;   /* adjust as needed */
-    right: 5%; /* icon screen ke right se thoda gap de */
-    /* z-index agar chahiye to ensure visible ho upar */
-    z-index: 999;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 10001;
   }
 
   /* dropdown positioning so that the menu shows below the icon, aligned right */
   .dropdown-content {
-    right: 10%;   /* content box aligned to right side */
-    left:20%; 
-    top:30%   /* ensure left side positioning doesnt override right */
+     position: fixed; /* ✅ ensures no scroll inside header */
+    top: 25px; /* just below mobile header */
+    right: 5%;
+    width: 40%;
+    z-index: 10000;
   }
-  .hero-container{
-    width:100vh;
-  }
-  .hero-image{
-    height:100%;
-    width:100%;
-  }
-  
-  .hero-title {
-    font-size: 1rem;
-    line-height: 1rem;
-    width: 50%;
-    margin-left: 5%;
-    top:16%;
-    text-align: center;
-
+  .hero-title h1{
+    font-size: 0.8rem;
+    top:10%;
   }
   .hero-title p{
-    width: 90%;
-    font-size: 0.5rem;
-    margin-left: 8%;
+    font-size: 0.4rem;
+    width:38%;
+    top:18%;
     line-height: 0.5rem;
-    
-  }
-  .hero-button {
+}
+.hero-button{
     height:4%;
-    width: 20%;
-    top: 27%;
-    left: 30%;
-    font-size: 0.6rem;
-  }
-  .spider-net{
-    height:auto;
-  }
-  .our-services-text{
-    font-size: 1.5rem;
-    margin-left:30%;
-  }
-  .cockroach-png{
-    margin-left:72%;
-    margin-top: -27%;
-  }
-  .services-container {
+    width: 18%;
+    top:27%;
+    font-size: 0.5rem;
+
+}
+.spider-net{
+    height: 25%;
+    width: 30%;
+    margin-top:-13%;
+    margin-left: -8%;
+}
+.our-services-text{
+    font-size: 1.2rem;
+}
+.cockroach-png{
+    margin-left: 65%;
+    margin-top: -14%;
+}
+.services-container{
     grid-template-columns: 1fr;
-    row-gap: 3%;
-    margin-left: 25%;
-    margin-right: 20%;
-  }
-  .services-box{
-    height:40vh;
-    width:40vh;
-  }
-  .our-product-section{
-    margin-top: 170%;
-    width:100vh;
-  }
-  .our-product-text{
-    font-size: 1.5rem;
+    margin-top: 5%;
+}
+.services-box{
+    height:100%;
+    width:60%;
+    margin: 0% 20%;
+    overflow-y: hidden;
+}
+.service-image-container{
+    height:20%;
+    width: 40%;
     margin-left: 30%;
-  }
-  .our-product-insect{
-    margin-left: 18%;
-    margin-top: -5%;
-  }
-  .our-product-spider{
-    margin-left: 90%;
-    margin-top: -22%;
-    height: auto;
-  }
-  .our-product-container{
-    padding:3%;
-    margin-right: 10%;
-  }
-  .our-product-description{
-    font-size: 0.80rem;
-    line-height: 1.5rem;
-    text-align: left;
+ 
    
-  }
-  .our-product-man{
-    margin-top: -15%;
-    height:30%;
-  }
-  .sector-section{
-    margin-top:30%;
-  }
-  .service-sector-text{
-    font-size: 1.5rem;
-    margin-left: 30%;
-  }
-  .service-sector-ant{
-    height: auto;
-    margin-left: 82%;
-    margin-top: -15%;
-  }
-  .icon-container {
-    margin-left: 15%;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 20px;
-  }
-  .why-needed-section{
-    width:100vh;
-  }
-  .why-needed-text{
-    font-size: 1.5rem;
-    margin-left: 5%;
-  }
-  .why-needed-container{
-    grid-template-columns: 1fr;
-    row-gap: 2%;
-  }
-  .why-needed-box h3{
-    font-size: 1.4rem;
-  }
-  .why-needed-bee{
+}
+.services-box h4{
+    font-size: 0.7rem;
+}
+.services-box h5{
+   font-size: 0.6rem;
+}
+.services-box a{
+    font-size :0.7rem;
+   text-align: center;
+   
+}
+.get-quote-link{
     height:auto;
-    margin-top: -22%;
-    margin-left: 100%;
-  }
-  .why-needed-box p{
+    display: block;
+    width:100%; 
+    padding :8% 8%;
     font-size: 0.8rem;
-  }
-  .what-people-say-section{
-    width:100vh;
-  }
+}
+.our-product-section{
+    margin-top: 8%;
+    padding-bottom:10%;
+    
+}
+.our-product-insect{
+    width:10%;
+    height:10%;
+    margin-left: 20%;
+}
+.our-product-text{
+    font-size: 1.2rem;
+
+}
+.our-product-spider{
+    height: 15%;
+    margin-left :70%;
+    margin-top: -20%;
+}
+.our-product-man{
+   display: none;
+}
+.our-product-description{
+    font-size: 0.5rem;
+    line-height: 1rem;
+}
+.service-sector-text{
+    font-size: 1.2rem;
+}
+.service-sector-ant{
+    height:8%;
+    width: 7%;
+    margin-left: 72%;
+}
+.icon-container{
+    grid-template-columns:1fr 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 8%;
+   
+}
+.icon-box{
+    height:100%;
+    width:100%;
+   
+}
+.icon-box p{
+    margin-top:3%;
+    font-size:0.8rem;
+    margin-left: 10%;
+}
+.icon{
+    height: 60%;
+    width: 60%;
+} 
+.why-needed-text{
+    font-size: 1.2rem;
+}
+.why-needed-bee{
+    height:10%;
+    width:10%;
+    margin-left:70%;
+    margin-top: -13%;
+}
+.why-needed-container{
+    grid-template-columns: 1fr;
+}
+.why-needed-box{
+    height:90%;
+    width:100%;
+    overflow-y: hidden;
+}
+.why-needed-box h3{
+    font-size: 1.2rem;
+}
+.why-needed-box p{
+    height: 100%;
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
   .what-people-say-text{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: 30%;
   }
-  .what-people-say-container{
-    column-gap: 10%;
-  }
-  
-  .inquiry-form-container {
-    height: auto;
-    grid-template-columns: 1fr;
-    width: 100%;
-    transform: translateY(20px);
-    margin-bottom: -15%;
-    padding: 8% 5%;
-    margin-top: 40%;
-    margin-left: 25%;
-  }
-  .inquiry-description h3 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-left: 0;
-  }
-  .inquiry-description p {
-    text-align: center;
-    margin-left: 0;
-    font-size: 0.7rem;
-  }
-  .inquiry-form {
-    height: 80%;
-    width: 80%;
-    padding: 8% 5%;
-    margin-left: 5%;
-  }
-  .inquiry-form input[type="text"],
+.what-people-say-container {
+      width: 400%;       /* jitna width chaho */
+      column-gap: 1%;
+    }
+.feedback{
+      width: 100%;
+      height: auto;
+    }
+
+.feedback img {
+      height: 70px;
+      width: 70px;
+    }
+    .feedback h4 {
+     font-size: 0.8rem;
+    }
+    .feedback p {
+      font-size: 0.5rem;
+    }
+    .rating-static i {
+      font-size: 0.8em;
+    }
+.inquiry-form-container{
+  grid-template-columns: 1fr;
+  row-gap: 1%;
+}
+.inquiry-description h3{
+    font-size: 1.2rem;
+    margin-left: 30%;
+}
+.inquiry-description p{
+  font-size: 0.6rem;
+}
+.inquiry-form{
+  height: auto;
+  width:90%;
+  margin: 5%;
+  margin-top: 0%;
+  overflow-y: hidden;
+}
+.inquiry-form input[type="text"],
     .inquiry-form input[type="tel"],
     .inquiry-form textarea {
-      height: 5%;
+      padding: 3% 1%;
+      margin-bottom: 2%;
+      border-radius: 6px;
+      font-size: 0.6rem;
+      margin-left: 5%;
     }
-    .inquiry-form textarea {
-      height:50%;
-      resize: vertical;
+.inquiry-form textarea {
+      height: 70px;
     }
     .service-text {
       font-size: 0.9rem;
+      margin-left: 12%;
+    }
+     .inquiry-form .services label {
+      font-size: 0.5rem;
+    }
+    .inquiry-form .services input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      
+    }
+     .inquiry-form button {
+      width: 40%;
+      padding:3%;
+      font-size:0.7rem;
+      margin-left:30%;
 
     }
-  footer {
-    width: 100vh;
-    margin-top: 140%;
-    padding: 15% 5% 5% 5%;
-    text-align: center;
-    
-  }
-  .footer-icons{
-    margin-left: -20% !important;
-  }
-  .footer-container{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 60%;
-  }
-  .footer-section i{
-  margin-left: -45%;
+    footer {
+  
+    margin-top:100%;
 }
-.footer-section .fa-map-marker-alt {
-  margin-left: -50% !important;
+.footer-container {
+    width:100%;
+  margin-top:110%;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+
 }
-  .footer-section p, 
+.footer-section h3 {
+    margin-bottom: 10%;
+   text-align: center;
+    font-size:1rem;
+
+}
+.work-day-div h3{
+   text-align: center;
+    font-size:1rem;
+    margin-top: 40% !important;
+}
+.work-day-div p{
+    font-size: 0.7rem;
+}
+.footer-section i{
+  margin-left: 0%;
+  margin-right: 2%;
+}
+.footer-section p, 
 .footer-section a {
-  margin-left: 30% !important;
-  padding-bottom: 5%;
+    width:100%;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    padding-left: 5%;
+}
+.footer-section a{
+    text-align: center;
+}
+.footer-icons{
+    height: 20%;
+}
+.footer-icons a {
+    
+    margin-right: 5%;
+    font-size: 1rem;
 }
 .footer-icons .fa-instagram { color: #E1306C; }
 .footer-icons .fa-facebook { color: #1877F2; }
 .footer-icons .fa-whatsapp { color: #25D366; }
 .footer-icons .fa-google { color: #DB4437; }
+.map iframe {
+    border: 0;
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+}
 
-   .map iframe {
-    width: 50vh;
-    height: 50vh;
-    margin-left: 10vh;
-    margin-right: 7vh;
-    margin-top: -10%;
-  }
-  .footer-bottom{
-    width:100%;
-  }
+
 }
