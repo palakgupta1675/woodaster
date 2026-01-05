@@ -124,41 +124,38 @@ header {
     
 
 }
-.hero-title h1{
+.hero-title{
     position: absolute;
-    top:35%;
-    left:10%;
+    top: 20%;
+    left: 10%;
+}
+.hero-title h1{
     font-weight: bold;
     color: white;
     font-family:'Josefin Sans', sans-serif;
-    line-height: 3rem;
+    line-height: 1rem;
     
 }
 
 .hero-title p{
-    position: absolute;
     width:30%;
     font-size: 1rem;
     text-align: center;
     font-family:'Josefin Sans', sans-serif;
-    top:45%;
-    left:8%;
     color: white;
     line-height: 1rem;
 }
 .hero-button{
-    position: absolute;
     background-color: #22A426;
     height:8%;
-    width: 12%;
+    width: auto;
     border-radius: 20px;
     border: none;
-    top:60%;
-    left: 15%;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.25rem;
     font-weight: bold;
-
+    margin-left: 5%;
+    padding: 1% 2%;
 }
 .hero-button a{
     color:white;
@@ -780,20 +777,22 @@ footer {
     width: 40%;
     z-index: 10000;
   }
+  .hero-title{
+    top: 10%;
+  }
   .hero-title h1{
-    font-size: 0.8rem;
-    top:10%;
+    font-size: 0.7rem;
+    line-height: 0.9rem;
   }
   .hero-title p{
     font-size: 0.4rem;
-    width:38%;
-    top:18%;
+    width:60%;
+    margin-top: -5%;
     line-height: 0.5rem;
+    text-align: left;
 }
 .hero-button{
-    height:4%;
-    width: 18%;
-    top:27%;
+    width: auto;
     font-size: 0.5rem;
 
 }
